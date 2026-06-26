@@ -256,10 +256,11 @@ section.active{display:block;}
 .acc-head .arrow{transition:transform .2s;font-size:11px;color:var(--muted);}
 .acc-head.open .arrow{transform:rotate(90deg);}
 .acc-body{max-height:0;overflow:hidden;transition:max-height .25s ease;}
-.acc-body-inner{padding:14px 16px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;}
+.acc-body-inner{padding:14px 16px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:10px;}
 .acc-col h5{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
 .acc-col.meta h5{color:var(--red);}
 .acc-col.insta h5{color:var(--purple);}
+.acc-col.comunidade h5{color:#25d366;}
 .acc-col.off h5{color:var(--gold);}
 .acc-col.metrica h5{color:var(--green);}
 .acc-col p{font-size:11px;color:var(--muted);line-height:1.55;}
@@ -1928,18 +1929,102 @@ function toggleAcc(el) {
 
 // ── Calendário gerado por JS
 const semanas = [
-  { label: 'Semana 1', mes: 'Mês 1', meta: 'Criar campanha topo (público frio). Subir Criativo A (ICP 1). Budget: R$875.', insta: 'Publicar 1º Reel de dados SP studios. Pilar: Inteligência de Mercado.', off: 'Listar 20 contatos qualificados do network Londrina (empresários, médicos, advogados). Abordar os 5 mais quentes via WhatsApp.', metrica: 'Pixel disparando? Formulário funcionando? Custo por resultado inicial.' },
-  { label: 'Semana 2', mes: 'Mês 1', meta: 'Subir Criativo B (ICP 1 ângulo 2). Monitorar CPL. Não otimizar ainda.', insta: '2 Reels + 1 Carrossel. Pilar educação financeira: TIR vs CDI.', off: 'Abordar mais 10 contatos network Londrina. Identificar 3 contadores/AAIs locais para parceria.', metrica: 'CPL da semana. Meta: abaixo de R$50 nessa fase de aprendizado.' },
-  { label: 'Semana 3', mes: 'Mês 1', meta: 'Avaliar Criativo A vs B. Pausar o pior. Subir Criativo C (ICP 2).', insta: '3 Reels + 1 Carrossel. Incluir 1 post de portfólio com dados de bairro.', off: 'Reunião de parceria com 2 contadores Londrina. Script: "seu cliente tem capital parado? Tenho análise de retorno de studios SP pronta."', metrica: 'CTR dos criativos. Taxa de abertura WhatsApp. Reuniões agendadas.' },
-  { label: 'Semana 4', mes: 'Mês 1', meta: 'Revisar semana 1 a 4. CPL real vs meta R$30. Ajustar público se necessário.', insta: '3 Reels + 1 Carrossel + 1 collab ou compartilhamento externo.', off: 'Almoço/café informal Londrina com 6–8 pessoas do network. Pauta: dados de mercado studios SP, sem pitch de produto.', metrica: 'Reuniões da semana. Pipeline CRM: quantos em cada estágio?' },
-  { label: 'Semana 5', mes: 'Mês 2', meta: 'Ativar campanha Meio (retargeting engajados Instagram + visitantes site). Budget: R$250.', insta: 'Aumentar cadência para 4 Reels/semana. Testar Stories interativos.', off: 'Follow-up com leads do encontro Londrina. Reativar clientes anteriores da 3N Capital com nova proposta studios SP.', metrica: 'Custo/lead qualificado (novo KPI). Meta: R$150 por qualificado.' },
-  { label: 'Semana 6', mes: 'Mês 2', meta: 'Subir Criativo D (ICP 2). Testar variação de headline no Criativo C.', insta: '4 Reels + 1 Carrossel dados mercado. Live rápida de 15min sobre TIR studios SP.', off: 'Abordar 2 AAIs Londrina (XP/BTG local). Mapear quem tem clientes com R$300k+ disponíveis.', metrica: 'Taxa qualificação acumulada. Meta: ≥ 18% leads qualificados.' },
-  { label: 'Semana 7', mes: 'Mês 2', meta: 'Avaliar performance criativo ICP 1 vs 2. Alocar mais budget para o melhor ICP.', insta: 'Reels + Carrossel. Testar formato "antes e depois" de análise de portfólio.', off: '2º encontro informal Londrina. Incluir 1 case real ou simulação de retorno como âncora da conversa.', metrica: 'Propostas enviadas no mês. Meta: ≥ 5 por mês.' },
-  { label: 'Semana 8', mes: 'Mês 2', meta: 'Subir Criativos E e F (ICP 3 — Sofisticado). Segmentação refinada.', insta: 'Conteúdo de autoridade: análise detalhada bairro + dados fonte verificada.', off: 'Avaliar pipeline Londrina: primeiro fechamento próximo? Se sim, planejar Coffee Morning SP para mês 3.', metrica: 'Primeiro fechamento confirmado? CAC até agora?' },
-  { label: 'Semana 9', mes: 'Mês 3', meta: 'Revisar performance acumulada 60 dias. CPL < R$25? Avaliar Google Ads.', insta: 'Estratégia de conteúdo para próximos 30 dias. Manter 4 Reels/semana.', off: 'Se 1ª venda confirmada: usar como case para abrir Coffee Morning SP. Se não: manter foco Londrina.', metrica: 'Pipeline completo: leads → qualif. → reunião → proposta → venda.' },
-  { label: 'Semana 10', mes: 'Mês 3', meta: 'Consolidar top 2 criativos por ICP. Pausar os demais. Testar variações de texto.', insta: 'Post mensal de dados mercado SP (relatório trimestral 3N Capital).', off: 'Coffee Morning SP (Itaim/Vila Olímpia) OU 3º encontro Londrina — depende do pipeline. Priorizar onde tem mais quente.', metrica: 'ROI acumulado. Receita gerada vs. investimento em ads.' },
-  { label: 'Semana 11', mes: 'Mês 3', meta: 'Ativar campanha LAL (Fundo). Budget: R$125. LAL 1% de leads qualificados.', insta: 'Reels + Carrossel + conteúdo repaginado dos melhores posts.', off: 'Mapear parcerias AAI em SP (XP, BTG, Rico) para fase 2. Conectar via LinkedIn ou indicação de parceiro Londrina.', metrica: 'Custo/venda. Meta: CAC < R$1.500.' },
-  { label: 'Semana 12', mes: 'Mês 3', meta: 'Revisão 90 dias: o que funcionou, o que pausar, o que escalar no mês 4.', insta: 'Retrospectiva em conteúdo. O que gerou mais salvamentos/compartilhamentos?', off: 'Balanço off: quantas vendas vieram do network Londrina vs. Meta Ads? Definir mix para Q2.', metrica: 'Vendas totais 90 dias. Receita total. ROI final. Decisão: escalar budget?' },
+  {
+    label: 'Semana 1', mes: 'Mês 1 — Fundação',
+    meta: 'Instalar Pixel Meta no site e verificar disparo. Criar conta Meta Ads. Configurar formulário nativo (3 campos: nome, WhatsApp, capital disponível). Criar campanha topo — estrutura pronta, não publicar ainda.',
+    insta: 'Criar perfil business. Publicar 3 posts de apresentação: (1) quem é a 3N Capital, (2) o que é studio de investimento, (3) dado de mercado SP. Stories diários desde o dia 1.',
+    comunidade: 'Criar grupo WhatsApp "Investidores SP · 3N Capital". Configurar mensagem de boas-vindas + regras. Configurar sequência de nurture no GHL (5 mensagens / 7 dias). Convidar os primeiros 5 membros internos.',
+    off: 'Lançar programa de indicação internamente: regras, perfil mínimo do indicado, benefício por indicação. Cada consultor mapeia 20 contatos qualificados em planilha (nome · profissão · capital estimado · canal).',
+    metrica: 'Pixel disparando? Formulário recebendo respostas? Grupo criado? Planilha de network com ≥ 20 nomes por consultor.'
+  },
+  {
+    label: 'Semana 2', mes: 'Mês 1 — Lançamento',
+    meta: 'Publicar campanha topo (Criativo A — ICP1 Atenção). Budget: R$875/semana. Não otimizar — aguardar dados de aprendizado. Monitorar CPL diário sem tomar ação.',
+    insta: '2 Reels + 1 Carrossel. Reel 1: hook agressivo ("Não compre studio em SP"). Carrossel: comparativo CDI vs studio — dados reais. Começar Stories com bastidores da análise de mercado.',
+    comunidade: 'Convidar leads quentes do network para o grupo (primeiros 10–20 membros externos). Enviar boas-vindas personalizada + análise de mercado em PDF. Nenhum pitch ainda.',
+    off: 'Abordar os 10 contatos mais quentes via WhatsApp (script de ativação direta). Reativar clientes e leads anteriores da 3N com nova proposta studios SP. Meta: 5 conversas abertas.',
+    metrica: 'CPL inicial (meta: abaixo de R$60 na fase de aprendizado). Membros no grupo. Respostas ao outreach. Conversas abertas.'
+  },
+  {
+    label: 'Semana 3', mes: 'Mês 1',
+    meta: 'Analisar Criativo A (CTR e CPL). Subir Criativo B (ICP1 — Deal Card Pinheiros). Ainda não pausar A — comparar com pelo menos 7 dias de dados. Público-alvo: manter o mesmo.',
+    insta: '3 Reels + 1 Carrossel. Incluir Deal Card como post (Studio Pinheiros · ficha de ativo completa). Reel 2: "CDI é excelente — pra quem não tem outra opção". Pilar: Educação Financeira.',
+    comunidade: 'Enviar primeiro broadcast de conteúdo para o grupo: dado exclusivo de mercado + análise. Convidar leads qualificados do Meta Ads que responderam ao nurture. Meta: ≥ 30 membros.',
+    off: 'Contatar 3 contadores/advogados tributaristas (script de parceria). Abordar 10 novos contatos do network. Identificar 2 AAIs com clientes HNW.',
+    metrica: 'CPL semana (meta: <R$50). Taxa de abertura WhatsApp nurture (meta: >60%). Membros ativos no grupo. Reuniões agendadas.'
+  },
+  {
+    label: 'Semana 4', mes: 'Mês 1 — Revisão',
+    meta: 'Revisar Criativo A vs B. Pausar o pior. Subir Criativo C (ICP2 — "Qual é o cap rate do seu imóvel atual?"). Budget mês 1 total: R$3.500. Ajustar público se CPL >R$60.',
+    insta: '3 Reels + 1 Carrossel + 1 post de autoridade com dados e fonte verificada. Primeiro post de ICP2 (investidor ativo com portfólio).',
+    comunidade: 'Broadcast semanal para membros: simulação R$300k → retorno mensal. CTA: "Quer a simulação no seu capital? Responda aqui." Nurture Meta: envio da mensagem de qualificação (Dia 3 da sequência).',
+    off: 'Encontro informal com 6–8 pessoas do network. Pauta: dados SP studios, sem pitch. ROI: 1 reunião qualificada saindo desse almoço já paga. Follow-up com 2 contadores abordados na semana 3.',
+    metrica: 'CPL real vs meta R$30. Reuniões agendadas (meta: ≥3). Pipeline CRM por estágio. Membros do grupo gerando leads.'
+  },
+  {
+    label: 'Semana 5', mes: 'Mês 2 — Retargeting',
+    meta: 'Ativar campanha Meio: retargeting de engajados no Instagram + visitantes do site. Budget: R$250/semana adicional. Subir Criativo D (ICP2 — carrossel comparativo). Campanha topo segue.',
+    insta: 'Aumentar para 4 Reels/semana. Testar Stories com poll: "Você calcula a TIR dos seus imóveis?" Usar resultado como pauta de conteúdo seguinte.',
+    comunidade: 'Grupo com ≥ 50 membros. Enviar convite para encontro/Coffee Morning. Criar canal de conteúdo exclusivo (só para membros do grupo). Começar aquecer a turma para o primeiro evento.',
+    off: 'Follow-up com leads do encontro semana 4. Fechar 2 parcerias com contadores (fluxo de indicação definido). Reativar 5 leads antigos da base 3N Capital.',
+    metrica: 'Custo/lead qualificado (meta: R$150). Membros ativos vs. passivos no grupo. Indicações recebidas via programa interno.'
+  },
+  {
+    label: 'Semana 6', mes: 'Mês 2',
+    meta: 'Subir 3º criativo ICP2 (Deal Card Vila Olímpia). Testar variação de headline no melhor criativo ICP1. Comparar performance por formato: imagem vs. carrossel vs. vídeo.',
+    insta: '4 Reels + 1 Carrossel de dados de mercado. Usar Deal Card como conteúdo orgânico (ficha de ativo real gera alto engajamento). Reel: "FII é mais prático. Exceto nisso."',
+    comunidade: 'Broadcast temático: "3 erros que investidores cometem antes de comprar studio." CTA: "Quer a análise do seu perfil? Me chama." Leads do grupo avançam para reunião individual.',
+    off: 'Reunião estruturada com 2 AAIs (XP/BTG). Apresentar fluxo de indicação. Proposta: "você atende o capital financeiro, a gente atende o imobiliário." Confirmar 1 parceiro AAI ativo.',
+    metrica: 'Taxa qualificação acumulada (meta: ≥18%). Propostas enviadas no mês (meta: ≥5). Reuniões via comunidade vs. Meta Ads.'
+  },
+  {
+    label: 'Semana 7', mes: 'Mês 2 — ICP Vencedor',
+    meta: 'Comparar performance acumulada ICP1 vs ICP2 (8 criativos rodados). Alocar 60% do budget para o ICP com menor CPL. Iniciar criativos ICP3 (Sofisticado).',
+    insta: 'Reel "antes e depois" de análise de portfólio. Carrossel: comparativo de cap rate entre bairros SP. Lives curtas (15min) de análise de mercado — geram engajamento alto.',
+    comunidade: 'Q&A ao vivo de 30min via WhatsApp (mensagem de voz ou áudio) sobre SP studios. Conteúdo exclusivo para membros. Convites para o encontro presencial da semana 7.',
+    off: '2º encontro informal. 1 case real como âncora (simulação de retorno de investidor do grupo). Confirmar ≥3 parceiros ativos (contadores + AAIs). Meta: ≥2 reuniões saindo do encontro.',
+    metrica: 'Propostas enviadas (meta: ≥5). Reuniões realizadas. Leads adicionados via comunidade vs. campanha paga.'
+  },
+  {
+    label: 'Semana 8', mes: 'Mês 2 — ICP3 + Planejamento Coffee',
+    meta: 'Criativos ICP3 live (Sofisticado — "Você tem patrimônio. O yield está errado." e Deal Card Itaim Bibi). Segmentação refinada: renda declarada maior, faixa etária 40–60.',
+    insta: 'Conteúdo de autoridade para ICP3: análise de bairro premium com fonte verificada. Tom mais sofisticado. Reel: "Quem te vendeu o último imóvel calculou a TIR?"',
+    comunidade: 'Criar subgrupo exclusivo para ICP3 (investidores R$500k+). Conteúdo específico: diagnóstico de portfólio, yield vs. valorização. Convite seletivo.',
+    off: 'Avaliar pipeline: 1ª venda próxima? Se sim → planejar Coffee Morning SP para semana 10. Mapear 5 AAIs em SP Capital para abordagem mês 3.',
+    metrica: '1ª venda confirmada? CAC acumulado. Qualidade dos leads da comunidade vs. Meta Ads. Pipeline por ICP.'
+  },
+  {
+    label: 'Semana 9', mes: 'Mês 3 — Revisão 60 dias',
+    meta: 'Revisão completa 60 dias: CPL real, taxa qualificação, custo/venda. CPL <R$25 por 4 semanas? → avaliar Google Search. Consolidar top 2 criativos por ICP. Pausar os demais.',
+    insta: 'Relatório mensal de conteúdo: melhores Reels, maior alcance, mais salvamentos. Plano de conteúdo mês 3. Manter 4 Reels/semana.',
+    comunidade: 'Broadcast mensal exclusivo: dado de mercado que ainda não foi publicado. CTA: "Compartilha com quem precisa ver isso." Crescimento orgânico do grupo via indicação de membros.',
+    off: 'Se 1ª venda confirmada → definir date do Coffee Morning SP. Usar case como âncora da abertura. Contatar parceiros para trazer convidados qualificados.',
+    metrica: 'Pipeline completo: 500 leads → 100 qualif. → 35 reuniões → 8 propostas → meta 8 vendas. Onde está o gargalo?'
+  },
+  {
+    label: 'Semana 10', mes: 'Mês 3 — Coffee Morning',
+    meta: 'Top 2 criativos por ICP consolidados. Alocar budget nos vencedores. Criar campanha de retargeting para participantes do Coffee Morning (pixel nos convidados que visitaram o site).',
+    insta: 'Post mensal de dados SP (relatório 3N Capital). Conteúdo de bastidores do Coffee Morning (com autorização dos participantes). Reel de cobertura do evento.',
+    comunidade: 'Membros do grupo como canal de confirmação de presença no Coffee Morning. Mensagem exclusiva: "você está na lista — confirme presença aqui." Adicionar participantes do evento ao grupo.',
+    off: '☕ Coffee Morning SP realizado — Itaim Bibi ou Vila Olímpia, 20–30 pessoas. Abertura com case real. 90 minutos de dados de mercado, sem pitch. Meta: ≥3 reuniões agendadas saindo do evento.',
+    metrica: 'ROI acumulado 75 dias. Participantes do Coffee Morning. Reuniões agendadas a partir do evento. Receita gerada vs. investimento total.'
+  },
+  {
+    label: 'Semana 11', mes: 'Mês 3 — LAL + Parcerias SP',
+    meta: 'Ativar LAL (Lookalike Fundo). Budget: R$125. LAL 1% de leads qualificados. Retargeting específico para quem participou do Coffee Morning e não fechou.',
+    insta: 'Reel de cobertura do Coffee Morning (se aprovado). Depoimento espontâneo de participante (gera mais credibilidade que qualquer anúncio). Conteúdo orgânico: análise de bairro com dados.',
+    comunidade: 'Convidar participantes do Coffee Morning para o grupo principal. Criar conteúdo exclusivo pós-evento: "os dados que mostramos no Coffee Morning — acesso completo para membros." Engajamento alto.',
+    off: 'Mapear e abordar 5 AAIs em SP Capital (XP, BTG, Rico, Genial, Modal). Conectar via LinkedIn ou via parceiro Londrina. Proposta de fluxo de indicação estruturada.',
+    metrica: 'Custo/venda (meta: CAC <R$1.500). Qualidade dos leads pós-Coffee Morning. Novos parceiros AAIs abordados.'
+  },
+  {
+    label: 'Semana 12', mes: 'Mês 3 — Balanço 90 dias',
+    meta: 'Revisão 90 dias: quais criativos performaram por ICP, qual público teve menor CPL, qual campanha gerou mais vendas. Definir budget e mix de campanhas para Q2.',
+    insta: 'Retrospectiva: melhores posts (alcance, salvamentos, DMs gerados). Plano de conteúdo Q2 baseado nos dados. O que escalar, o que pausar.',
+    comunidade: 'Balanço do grupo: membros ativos, leads convertidos, engajamento semanal. O grupo virou canal de geração de oportunidades ou só de conteúdo? Ajustar estratégia para Q2.',
+    off: 'Balanço total: vendas via network interno vs. parcerias vs. Meta Ads vs. Comunidade. Definir mix de captação para Coffee Morning Q2. Iniciar Meta Ads para eventos (Fase 3) se evento estabilizado.',
+    metrica: 'Vendas totais 90 dias. Receita total. ROI final. CAC por canal. Decisão: escalar budget no Q2?'
+  },
 ];
 
 function buildCalendario() {
@@ -1955,6 +2040,7 @@ function buildCalendario() {
         <div class="acc-body-inner">
           <div class="acc-col meta"><h5>Meta Ads</h5><p>${s.meta}</p></div>
           <div class="acc-col insta"><h5>Instagram</h5><p>${s.insta}</p></div>
+          <div class="acc-col comunidade"><h5>Comunidade</h5><p>${s.comunidade}</p></div>
           <div class="acc-col off"><h5>Off / Parcerias</h5><p>${s.off}</p></div>
           <div class="acc-col metrica"><h5>Métrica</h5><p>${s.metrica}</p></div>
         </div>
